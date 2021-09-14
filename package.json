@@ -1,0 +1,27 @@
+{
+  "name": "tailwindtest",
+  "version": "1.0.0",
+  "description": "Prose Important Test",
+  "main": "index.js",
+  "scripts": {
+    "update": "npm-check -ys && composer update",
+    "info": "npm list && composer info",
+    "watch": "npx tailwindcss -i .tailwind.css -o .styles.css --postcss -w",
+    "build": "npx tailwindcss -i .tailwind.css -o .styles.css --postcss -m",
+    "prod": "NODE_ENV=production npx tailwindcss -i .tailwind.css -o .styles.css --postcss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.7",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^8.0.1",
+    "tailwindcss": "^2.2.15"
+  }
+}

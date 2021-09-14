@@ -5,9 +5,7 @@ module.exports = {
         mode: 'layers',
         enabled: true,
         content: [
-            './site/templates/*.php',
-            './site/snippets/*.php',
-            './site/postcss/*.css',
+            '.test.php',
         ],
     },
     darkMode: false, // or 'media' or 'class'

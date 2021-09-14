@@ -1,0 +1,433 @@
+.nav-active {
+  @apply bg-blue-800 !important;
+  box-shadow: 5px -1px 12px -5px grey;
+}
+.scrolltotop-active {
+  display: flex !important;
+}
+
+/*easier solution for Font Awesome: https://blog.webjeda.com/optimize-fontawesome/#the-easy-way*/
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+ 
+.fa-bars:before {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgY29udGVudFNjcmlwdFR5cGU9InRleHQvZWNtYXNjcmlwdCIgY29udGVudFN0eWxlVHlwZT0idGV4dC9jc3MiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwNDggMjA0OCIgaGVpZ2h0PSIyMDQ4cHgiIGlkPSJMYXllcl8xIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAuMCAwIDE1MzYuMCAyMDQ4IiB3aWR0aD0iMTUzNi4wcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxwYXRoIGQ9Ik0xNTM2LDE0NzJ2MTI4YzAsMTcuMzMzLTYuMzMzLDMyLjMzMy0xOSw0NXMtMjcuNjY3LDE5LTQ1LDE5SDY0Yy0xNy4zMzMsMC0zMi4zMzMtNi4zMzMtNDUtMTlzLTE5LTI3LjY2Ny0xOS00NXYtMTI4ICBjMC0xNy4zMzMsNi4zMzMtMzIuMzMzLDE5LTQ1czI3LjY2Ny0xOSw0NS0xOWgxNDA4YzE3LjMzMywwLDMyLjMzMyw2LjMzMyw0NSwxOVMxNTM2LDE0NTQuNjY3LDE1MzYsMTQ3MnogTTE1MzYsOTYwdjEyOCAgYzAsMTcuMzMzLTYuMzMzLDMyLjMzMy0xOSw0NXMtMjcuNjY3LDE5LTQ1LDE5SDY0Yy0xNy4zMzMsMC0zMi4zMzMtNi4zMzMtNDUtMTlzLTE5LTI3LjY2Ny0xOS00NVY5NjBjMC0xNy4zMzMsNi4zMzMtMzIuMzMzLDE5LTQ1ICBzMjcuNjY3LTE5LDQ1LTE5aDE0MDhjMTcuMzMzLDAsMzIuMzMzLDYuMzMzLDQ1LDE5UzE1MzYsOTQyLjY2NywxNTM2LDk2MHogTTE1MzYsNDQ4djEyOGMwLDE3LjMzMy02LjMzMywzMi4zMzMtMTksNDUgIHMtMjcuNjY3LDE5LTQ1LDE5SDY0Yy0xNy4zMzMsMC0zMi4zMzMtNi4zMzMtNDUtMTlTMCw1OTMuMzMzLDAsNTc2VjQ0OGMwLTE3LjMzMyw2LjMzMy0zMi4zMzMsMTktNDVzMjcuNjY3LTE5LDQ1LTE5aDE0MDggIGMxNy4zMzMsMCwzMi4zMzMsNi4zMzMsNDUsMTlTMTUzNiw0MzAuNjY3LDE1MzYsNDQ4eiIvPjwvc3ZnPg==");
+    background-size: 16px 16px;
+    display: inline-block;
+    width: 16px; 
+    height: 16px;
+    content:"";
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    transform: scale(1.5);
+}
+
+div.prose a:not([href*="peleke"])::after {
+  /*CSS for external links */
+  content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2211%22%20viewBox%3D%220%200%2010%2011%22%3E%3Cpath%20d%3D%22M4.5%203.5h-4v6h6v-4%22%20fill%3D%22transparent%22%20stroke%3D%22%23ff5b5e%22%2F%3E%3Cpath%20d%3D%22M4.5.5h5v5L9%206%207.5%204.5l-3%203-2-2%203-3L4%201z%22%20fill%3D%22transparent%22%20stroke%3D%22%23ff5b5e%22%20stroke-width%3D%221.001%22%2F%3E%3C%2Fsvg%3E);
+  position: relative;
+  top: -3px;
+  margin: 0 1px 0 3px;
+}
+
+div.prose a:not(.auto) {
+  /*CSS for internal links */
+  font-weight: 400;
+  text-decoration: underline;
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.4) 4%,
+    rgba(255, 225, 0, 0.2)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+div.prose a:hover {
+  /*CSS for internal links */
+  @apply hover:font-semibold;
+}
+
+.prose blockquote footer{
+  font-weight: 400;
+  text-align: right;
+}
+
+.twitter-text a {
+  color:#60a5fa;
+}
+
+.twitter-text a:hover {
+  color:#1f40af;
+}
+
+.primarynav .current-link {
+  /*background-color: rgba(37, 99, 235, 0.5)!important;*/
+  font-weight: bold!important;
+  text-decoration: underline;
+}
+
+mark {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+figure { width: 100%; }
+img[data-sizes="auto"] { display: block; width: 100%; }
+.lazysrcset-ratio {
+  @apply relative;
+  & > img {
+      @apply absolute top-0 left-0 w-full h-full block;
+      &:after {
+          content: '';
+          @apply block h-0 w-full;
+      }
+  }
+}
+li>ul                 { transform: translatex(100%) scale(0) }
+li:hover>ul           { transform: translatex(101%) scale(1) }
+li > button svg       { transform: rotate(-90deg) }
+li:hover > button svg { transform: rotate(-270deg) }
+.group:hover .group-hover\:scale-100 { transform: scale(1) }
+.group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+.scale-0 { transform: scale(0) }
+.min-w-32 { min-width: 8rem }
+
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em 1em 0.5em 0
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9
+}
+
+.resp-sharing-button--pinterest {
+  background-color: #bd081c
+}
+
+.resp-sharing-button--pinterest:hover {
+  background-color: #8c0615
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+  background-color: #2d4373
+}
+
+.resp-sharing-button--tumblr {
+  background-color: #35465C
+}
+
+.resp-sharing-button--tumblr:hover {
+  background-color: #222d3c
+}
+
+.resp-sharing-button--reddit {
+  background-color: #5f99cf
+}
+
+.resp-sharing-button--reddit:hover {
+  background-color: #3a80c1
+}
+
+.resp-sharing-button--google {
+  background-color: #dd4b39
+}
+
+.resp-sharing-button--google:hover {
+  background-color: #c23321
+}
+
+.resp-sharing-button--linkedin {
+  background-color: #0077b5
+}
+
+.resp-sharing-button--linkedin:hover {
+  background-color: #046293
+}
+
+.resp-sharing-button--email {
+  background-color: #777
+}
+
+.resp-sharing-button--email:hover {
+  background-color: #5e5e5e
+}
+
+.resp-sharing-button--xing {
+  background-color: #1a7576
+}
+
+.resp-sharing-button--xing:hover {
+  background-color: #114c4c
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366
+}
+
+.resp-sharing-button--whatsapp:hover {
+  background-color: #1da851
+}
+
+.resp-sharing-button--hackernews {
+background-color: #FF6600
+}
+.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
+
+.resp-sharing-button--vk {
+  background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+  background-color: #43648c
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
+.resp-sharing-button--email {
+  background-color: #777777;
+  border-color: #777777;
+}
+
+.resp-sharing-button--email:hover,
+.resp-sharing-button--email:active {
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+.resp-sharing-button--whatsapp:hover,
+.resp-sharing-button--whatsapp:active {
+  background-color: #1DA851;
+  border-color: #1DA851;
+}
+
+.scrolltop-wrap {
+  box-sizing: border-box;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.scrolltop-wrap #scrolltop-bg {
+  fill: #1f40af;
+}
+.scrolltop-wrap #scrolltop-arrow {
+  fill: white;
+}
+.scrolltop-wrap a:hover #scrolltop-bg {
+  fill: #007bff;
+}
+.scrolltop-wrap a:hover #scrolltop-arrow {
+  fill: white;
+}
+@supports (-moz-appearance: meterbar) {
+  .scrolltop-wrap {
+    clip: rect(0, 3rem, auto, 0);
+  }
+}
+.scrolltop-wrap a {
+  position: fixed;
+  position: sticky;
+  align-self: flex-start;
+  height: auto;
+  top: -5rem;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: -5rem;
+  transform: translateY(100vh);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: all;
+  outline: none;
+  overflow: hidden;
+}
+.scrolltop-wrap a svg {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.scrolltop-wrap a svg path {
+  transition: all 0.1s;
+}
+.scrolltop-wrap a #scrolltop-arrow {
+  transform: scale(0.66);
+  transform-origin: center;
+}
+@media print {
+  .scrolltop-wrap {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+div.box-info {
+  @apply px-4 py-3 my-3 leading-normal text-blue-700 bg-blue-100 rounded-lg;
+  & > p {
+    @apply my-0
+  }
+}
+
+div.box-success {
+  @apply px-4 py-3 my-3 leading-normal text-green-700 bg-green-100 rounded-lg;
+  & > p {
+    @apply my-0
+  }
+}
+
+div.box-bolt {
+  @apply px-4 py-3 my-3 leading-normal text-yellow-700 bg-yellow-100 rounded-lg;
+  & > p {
+    @apply my-0
+  }
+}
+
+div.box-alert {
+  @apply px-4 py-3 my-3 leading-normal text-red-700 bg-red-100 rounded-lg;
+  & > p {
+    @apply my-0
+  }
+}
+
+div.box-neutral {
+  @apply px-4 py-3 my-3 leading-normal text-gray-700 bg-gray-100 rounded-lg;
+  & > p {
+    @apply my-0
+  }
+}
+
+.prose :not(pre) > code.language-text {
+  white-space: pre-line;
+}
+
+pre.hljs {
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  counter-reset: line;
+  overflow: auto;
+}
+
+pre.hljs > code::before {
+  content: attr(data-language);
+  float: right;
+  color: gray;
+}
+
+pre.hljs .hljs-code-line {
+  counter-increment: line;
+}
+
+pre.hljs .hljs-code-line::before {
+  content: counter(line);
+  display: inline-block;
+  margin-right: 1rem;
+  opacity: 0.5;
+}
